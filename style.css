@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Farro', sans-serif;
+    transition: all 0.5s ease;
+    /* background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165), ); */
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgba(79, 51, 176, 1), rgba(210, 53, 165));
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calc{
+    box-shadow: 0 0 30px #000;
+    border-radius: 20px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 66px);
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #333;
+}
+
+.theme-toggler.active::before {
+    background-color: #fff;
+}
+
+.theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+
+input{
+    grid-column: span 4;
+    height: 68px;
+    width: 258px;
+    /* box-shadow: inset -6px -6px 13px #fff,
+                inset 6px 6px 13px rgba(0, 0, 0, .16);
+    background-color: #ecf0f3; */
+    border: none;
+    border-radius: 32px;
+    color: rgb(26, 25, 25);
+    text-align: end;
+    margin: 40px 0px 30px 0px;    
+    padding: 20px;
+    font-size: 40px;
+}
+
+button{
+    /* box-shadow: inset 6px 6px 13px #fff,
+                6px 6px 13px rgba(0, 0, 0, .16);
+    background-color: #ecf0f3; */
+    border: none;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    /* font-weight: bold; */
+    font-size: 20px;
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.equal{
+    width: 120px;
+    border-radius: 42px;
+    /* box-shadow: inset 6px 6px 13px #fff,
+                6px 6px 13px rgba(0, 0, 0, .16);
+    background-color: #ecf0f3; */
+}
+
+/* ligth theme */
+
+.calc{
+    background-color: #fff;
+}
+
+.calc #inputext{
+    color: #0a1e23;
+}
+
+.calc button#clear{
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calc button.btn_number{
+    background-color: #c3eaff;
+    color: #000;
+}
+
+.calc button.btn_operator{
+    background-color: #ffd0fd;
+    color: #f967f3;
+}
+
+.calc button.equal{
+    background-color: #adf9e7;
+    color: #000;
+}
+
+/* dark theme */
+
+.calc.dark{
+    background-color: #071115;
+}
+
+.calc.dark #inputext{
+    background-color: #071115;
+    color: #f8fafd;
+}
+
+.calc.dark button#clear{
+    background-color: #2d191e;
+    color: #bd3740;
+}
+
+.calc.dark button.btn_number{
+    background-color: #1b2f38;
+    color: #f8fafb;
+}
+
+.calc.dark button.btn_operator{
+    background-color: #2e1f39;
+    color: #aa00a4;
+}
+
+.calc.dark button.equal{
+    background-color: #223323;
+    color: #ffffff;
+}
